@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled(DefaultContainer)`
-    border: 1px solid blue;
     margin-top: 0;
 
     /* min-height: 100vh; */
@@ -24,7 +23,7 @@ export const Container = styled(DefaultContainer)`
 
     h1 {
         font-weight: 700;
-        font-size: clamp(3rem, 3vw, 4rem);
+        font-size: clamp(3rem, 5vw, 4rem);
         line-height: 3.75rem;
     }
 
@@ -37,7 +36,7 @@ export const Container = styled(DefaultContainer)`
 
     @media (min-width: 50rem) {
         grid-template-columns: 1.35fr 1fr;
-        gap: 2rem;
+        gap: 3rem;
 
         > div:first-child {
             align-self: start;
