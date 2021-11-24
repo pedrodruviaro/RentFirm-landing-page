@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Container, Wrapper } from "./styles.jsx";
+import { Container, Hamburger, Navbar, Wrapper } from "./styles.jsx";
+import { Button } from "../Button";
 
 export const Header = () => {
-    const [active, setActive] = useState(false);
+    const [headerActive, setHeaderActive] = useState(false);
+    const [navbarOpen, setNavbarOpen] = useState(false);
 
     useEffect(() => {
         function handleScroll(e) {
             if (window.scrollY >= 30) {
-                setActive(true);
+                setHeaderActive(true);
             } else {
-                setActive(false);
+                setHeaderActive(false);
             }
         }
         window.document.addEventListener("scroll", handleScroll);
@@ -20,8 +22,34 @@ export const Header = () => {
     }, []);
 
     return (
-        <Wrapper active={active}>
-            <Container>header</Container>
+        <Wrapper>
+            <Container active={headerActive}>
+                <span>
+                    <img src="/assets/images/logo.svg" alt="Besnik Rent Firm" />
+                </span>
+
+                <Navbar active={navbarOpen}>
+                    <nav>
+                        <a href="/">Home</a>
+                        <a href="/">Fratures</a>
+                        <a href="/">Service</a>
+                        <a href="/">Listed</a>
+                        <a href="/">Contact</a>
+                    </nav>
+
+                    <div>
+                        <Button secondary>Sign up</Button>
+                        <Button>Register</Button>
+                    </div>
+                </Navbar>
+
+                <Hamburger
+                    active={navbarOpen}
+                    onClick={() => setNavbarOpen(!navbarOpen)}
+                >
+                    <span></span>
+                </Hamburger>
+            </Container>
         </Wrapper>
     );
 };

@@ -21,4 +21,12 @@ export const Container = styled.button`
             background-color: ${(props) => props.theme.light};
             color: ${(props) => props.theme.accentDark};
         `}
+
+    ${(props) =>
+        props.outlined &&
+        css`
+            background-color: transparent;
+            color: ${(props) => props.theme.light};
+            border: 1px solid currentColor;
+        `}
 `;
