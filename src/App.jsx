@@ -1,3 +1,5 @@
+import { Button } from "./components/Button";
+
 export const App = () => {
     return (
         <>
@@ -8,7 +10,7 @@ export const App = () => {
                 aperiam eum excepturi nesciunt quisquam veniam, dolorem
                 voluptate perspiciatis voluptates temporibus magnam.
             </p>
-            <button>More About Us</button>
+            <Button>More About Us</Button>
         </>
     );
 };

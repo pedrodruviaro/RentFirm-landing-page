@@ -78,7 +78,7 @@ export const ResetStyles = createGlobalStyle`
     button {
         cursor: pointer;
         background: transparent;
-        border: 1px solid;
+        border: none;
         outline: none;
         font-size: 1rem;
     }
