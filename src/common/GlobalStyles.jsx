@@ -26,6 +26,6 @@ export const GlobalStyles = createGlobalStyle`
 
     p, span, button, a{
         font-weight: 400;
-        color: ${(props) => props.theme.text};
+        color: ${(props) => props.theme.medium};
     }
 `;
